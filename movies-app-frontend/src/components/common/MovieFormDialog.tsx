@@ -395,7 +395,7 @@ export const MovieFormDialog: React.FC<MovieFormDialogProps> = ({
               type="button"
               disabled={loading}
               onClick={handleSubmit}
-              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
+              className="bg-linear-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
             >
               {loading ? "Saving..." : movie ? "Update" : "Save"}
             </Button>
