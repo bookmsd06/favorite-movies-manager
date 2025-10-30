@@ -101,7 +101,7 @@ export const MovieFormDialog: React.FC<MovieFormDialogProps> = ({
     if (type === "number") {
         newValue = value === "" ? "" : Math.max(Number(value), 0).toString();
     }
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: newValue }));
     // clear the error for the field for which the user is typing
     setErrors((prev) => {
         const newErrors = { ...prev };

@@ -25,7 +25,6 @@ export const ToastDialog: React.FC<ToastDialogProps> = ({
   title,
   description,
   type = "info",
-  duration = 3000,
 }) => {
 
   const getClass = () => {
