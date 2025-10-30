@@ -85,3 +85,52 @@ Start Frontend Development Server
 bash
 npm run dev
 Frontend will run on http://localhost:5173
+
+Database Schema
+Movies Table
+sql
+CREATE TABLE movies (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  type ENUM('MOVIE', 'TV_SHOW') NOT NULL,
+  director VARCHAR(255) NOT NULL,
+  budget DECIMAL(15,2),
+  location VARCHAR(255),
+  duration INT,
+  year_time INT,
+  details TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+Prisma Schema (if using Prisma)
+prisma
+model Movie {
+  id        Int      @id @default(autoincrement())
+  title     String
+  type      String   // "MOVIE" or "TV_SHOW"
+  director  String
+  budget    Float?
+  location  String?
+  duration  Int?
+  year_time Int?
+  details   String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+🌐 API Endpoints
+Method	Endpoint	Description
+GET	/api/movies	Get all movies with pagination
+GET	/api/movies?page=1&limit=10	Get paginated movies
+POST	/api/movies	Create new movie
+PUT	/api/movies/:id	Update movie
+DELETE	/api/movies/:id	Delete movie
+GET	/api/movies/search	Search movies
+
+🎯 Usage
+Access the application at http://localhost:5173
+Add new entries using the "Add New" button
+Search and filter using the search bar and type filter
+Scroll down to automatically load more entries
+Edit or delete entries using action buttons
