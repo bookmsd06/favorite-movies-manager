@@ -11,17 +11,17 @@ Full-stack web application for managing favorite movies and TV shows
 7) Responsive Design - works on desktop and mobile
 
 Tech Stack
-    Frontend
-        React (with Vite and TypeScript)
-        TailwindCSS for styling
-        Shadcn UI component library
-        React Hooks for state management
+Frontend
+React (with Vite and TypeScript)
+TailwindCSS for styling
+Shadcn UI component library
+React Hooks for state management
 
-    Backend
-        Node.js with Express
-        MySQL database
-        Prisma ORM
-        Zod for schema validation
+Backend
+Node.js with Express
+MySQL database
+Prisma ORM
+Zod for schema validation
 
 📋 Prerequisites
 Node.js (v18 or higher)
