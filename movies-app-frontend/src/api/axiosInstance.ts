@@ -1,8 +1,8 @@
-import { LOCAL_URL } from '@/constant';
+import { LIVE_URL } from '@/constant';
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: LOCAL_URL,
+  baseURL: LIVE_URL,
   withCredentials: false,
 })
 
